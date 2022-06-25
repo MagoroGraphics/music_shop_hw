@@ -1,8 +1,6 @@
 package instruments;
 
-import interfaces.IPlay;
-
-public class Drums extends Instrument implements IPlay {
+public class Drums extends Instrument {
     private int numOfDrums;
 
     public Drums(String material, String colour, InstrumentType type, double price, int numOfDrums) {

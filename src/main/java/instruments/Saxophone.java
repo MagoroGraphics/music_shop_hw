@@ -12,4 +12,9 @@ public class Saxophone extends Instrument {
         return numOfValves;
     }
 
+    @Override
+    public String play() {
+        return "Playing saxophone";
+    }
+
 }

@@ -1,8 +1,6 @@
 package instruments;
 
-import interfaces.IPlay;
-
-public class Guitar extends Instrument implements IPlay {
+public class Guitar extends Instrument {
 
     private int numOfStrings;
 
