@@ -17,4 +17,8 @@ public class Piano extends Instrument {
         return "Playing piano";
     }
 
+    @Override
+    public double calculateMarkup() {
+        return 0;
+    }
 }

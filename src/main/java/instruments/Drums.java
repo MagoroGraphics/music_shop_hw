@@ -16,4 +16,9 @@ public class Drums extends Instrument {
     public String play() {
         return "Drums playing";
     }
+
+    @Override
+    public double calculateMarkup() {
+        return 0;
+    }
 }

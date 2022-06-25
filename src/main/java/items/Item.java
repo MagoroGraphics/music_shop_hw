@@ -1,6 +1,8 @@
 package items;
 
-public abstract class Item {
+import interfaces.ISell;
+
+public abstract class Item implements ISell {
     public double buyingPrice;
     public double sellingPrice;
     public String type;

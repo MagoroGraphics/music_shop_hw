@@ -17,4 +17,8 @@ public class Saxophone extends Instrument {
         return "Playing saxophone";
     }
 
+    @Override
+    public double calculateMarkup() {
+        return 0;
+    }
 }

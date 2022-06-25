@@ -17,4 +17,9 @@ public class Guitar extends Instrument {
     public String play() {
         return "Playing guitar";
     }
+
+    @Override
+    public double calculateMarkup() {
+        return 0;
+    }
 }
