@@ -13,4 +13,13 @@ public class Shop {
     public ArrayList<ISell> getStock() {
         return stock;
     }
+
+    public void addToStock(ISell item){
+        this.stock.add(item);
+    }
+
+
+    public void removeFromStock() {
+        this.stock.remove(0);
+    }
 }

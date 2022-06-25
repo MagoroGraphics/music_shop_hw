@@ -50,4 +50,17 @@ public class ShopTest {
     public void getStock() {
         assertEquals(7, shop.getStock().size());
     }
+
+    @Test
+    public void canAddToStock() {
+        Guitar guitar2 = new Guitar("plastic", "red", InstrumentType.STRINGS, 230.00, 8);
+        shop.addToStock(guitar2);
+        assertEquals(8, shop.getStock().size());
+    }
+
+    @Test
+    public void canRemoveFromStock(){
+        shop.removeFromStock();
+        assertEquals(6, shop.getStock().size());
+    }
 }
