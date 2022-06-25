@@ -15,28 +15,28 @@ public class DrumsTest {
     }
 
     @Test
-    public void getNumOfDrums() {
+    public void hasNumOfDrums() {
         assertEquals(8, drums.getNumOfDrums());
     }
 
 
     @Test
-    public void getMaterial() {
+    public void hasMaterial() {
         assertEquals("aluminium, polyester, brass", drums.getMaterial());
     }
 
     @Test
-    public void getColour() {
+    public void hasColour() {
         assertEquals("black", drums.getColour());
     }
 
     @Test
-    public void getType() {
+    public void hasType() {
         assertEquals(InstrumentType.PERCUSSION, drums.getType());
     }
 
     @Test
-    public void getPrice() {
+    public void hasPrice() {
         assertEquals(280.90, drums.getPrice(), 0.0);
     }
 }
