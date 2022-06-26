@@ -5,8 +5,4 @@ public class GuitarStrings extends Item{
         super(buyingPrice, sellingPrice, type);
     }
 
-    @Override
-    public double calculateMarkup() {
-        return 0;
-    }
 }

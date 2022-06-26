@@ -6,8 +6,4 @@ public class DrumSticks extends Item{
         super(buyingPrice, sellingPrice, type);
     }
 
-    @Override
-    public double calculateMarkup() {
-        return 0;
-    }
 }

@@ -24,4 +24,8 @@ public abstract class Item implements ISell {
     public String getType() {
         return type;
     }
+
+    public double calculateMarkup(){
+        return this. sellingPrice - this.buyingPrice;
+    }
 }

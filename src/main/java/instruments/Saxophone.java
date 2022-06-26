@@ -3,8 +3,8 @@ package instruments;
 public class Saxophone extends Instrument {
     private int numOfValves;
 
-    public Saxophone(String material, String colour, InstrumentType type, double price, int numOfValves) {
-        super(material, colour, type, price);
+    public Saxophone(String material, String colour, InstrumentType type, double sellingPrice, double buyingPrice, int numOfValves) {
+        super(material, colour, type, sellingPrice, buyingPrice);
         this.numOfValves = numOfValves;
     }
 
@@ -17,8 +17,4 @@ public class Saxophone extends Instrument {
         return "Playing saxophone";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return 0;
-    }
 }

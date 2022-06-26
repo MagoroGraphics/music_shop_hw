@@ -4,8 +4,8 @@ public class Guitar extends Instrument {
 
     private int numOfStrings;
 
-    public Guitar(String material, String colour, InstrumentType type, double price, int numOfStrings) {
-        super(material, colour, type, price);
+    public Guitar(String material, String colour, InstrumentType type, double sellingPrice, double buyingPrice, int numOfStrings) {
+        super(material, colour, type, sellingPrice, buyingPrice);
         this.numOfStrings = numOfStrings;
     }
 
@@ -18,8 +18,5 @@ public class Guitar extends Instrument {
         return "Playing guitar";
     }
 
-    @Override
-    public double calculateMarkup() {
-        return 0;
-    }
+
 }

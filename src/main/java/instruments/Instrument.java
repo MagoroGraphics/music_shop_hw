@@ -8,13 +8,15 @@ public abstract class Instrument implements IPlay, ISell {
     public String material;
     public String colour;
     public InstrumentType type;
-    public double price;
+    public double sellingPrice;
+    public double buyingPrice;
 
-    public Instrument(String material, String colour, InstrumentType type, double price) {
+    public Instrument(String material, String colour, InstrumentType type, double sellingPrice, double buyingPrice) {
         this.material = material;
         this.colour = colour;
         this.type = type;
-        this.price = price;
+        this.sellingPrice = sellingPrice;
+        this.buyingPrice = buyingPrice;
     }
 
     public String getMaterial() {
@@ -29,7 +31,15 @@ public abstract class Instrument implements IPlay, ISell {
         return type;
     }
 
-    public double getPrice() {
-        return price;
+    public double getSellingPrice() {
+        return sellingPrice;
+    }
+
+    public double getBuyingPrice() {
+        return buyingPrice;
+    }
+
+    public double calculateMarkup(){
+        return this.sellingPrice - this.buyingPrice;
     }
 }

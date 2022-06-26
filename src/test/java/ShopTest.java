@@ -26,10 +26,10 @@ public class ShopTest {
 
     @Before
     public void before(){
-        guitar = new Guitar("wood","white", InstrumentType.STRINGS, 150.50, 7);
-        drums = new Drums("aluminium, polyester, brass", "black", InstrumentType.PERCUSSION, 280.90, 8);
-        piano = new Piano("plastic", "grey", InstrumentType.CHORDOPHONE, 550.80, 64);
-        saxophone = new Saxophone("brass", "brass", InstrumentType.WIND, 340.00, 25);
+        guitar = new Guitar("wood","white", InstrumentType.STRINGS, 150.50, 70, 8);
+        drums = new Drums("aluminium, polyester, brass", "black", InstrumentType.PERCUSSION, 280.90, 80, 8);
+        piano = new Piano("plastic", "grey", InstrumentType.CHORDOPHONE, 550.80, 100, 64);
+        saxophone = new Saxophone("brass", "brass", InstrumentType.WIND, 340.00, 100, 25);
         itemsInStock = new ArrayList<>();
         itemsInStock.add(guitar);
         itemsInStock.add(drums);
@@ -53,7 +53,7 @@ public class ShopTest {
 
     @Test
     public void canAddToStock() {
-        Guitar guitar2 = new Guitar("plastic", "red", InstrumentType.STRINGS, 230.00, 8);
+        Guitar guitar2 = new Guitar("plastic", "red", InstrumentType.STRINGS, 230.00, 80, 8);
         shop.addToStock(guitar2);
         assertEquals(8, shop.getStock().size());
     }
