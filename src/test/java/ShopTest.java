@@ -26,9 +26,9 @@ public class ShopTest {
 
     @Before
     public void before(){
-        guitar = new Guitar("wood","white", InstrumentType.STRINGS, 150.50, 70, 8);
-        drums = new Drums("aluminium, polyester, brass", "black", InstrumentType.PERCUSSION, 280.90, 80, 8);
-        piano = new Piano("plastic", "grey", InstrumentType.CHORDOPHONE, 550.80, 100, 64);
+        guitar = new Guitar("wood","white", InstrumentType.STRINGS, 150.00, 70, 8);
+        drums = new Drums("aluminium, polyester, brass", "black", InstrumentType.PERCUSSION, 280.00, 80, 8);
+        piano = new Piano("plastic", "grey", InstrumentType.CHORDOPHONE, 550.00, 100, 64);
         saxophone = new Saxophone("brass", "brass", InstrumentType.WIND, 340.00, 100, 25);
         itemsInStock = new ArrayList<>();
         itemsInStock.add(guitar);
@@ -36,8 +36,8 @@ public class ShopTest {
         itemsInStock.add(piano);
         itemsInStock.add(saxophone);
 
-        drumSticks = new DrumSticks(10.00, 25.50, "drumkit items");
-        guitarStrings = new GuitarStrings(5.20, 19.99, "guitar items");
+        drumSticks = new DrumSticks(10.00, 25.00, "drumkit items");
+        guitarStrings = new GuitarStrings(5.00, 19.00, "guitar items");
         sheetMusic = new SheetMusic(1.00, 10.00, "music sheets");
         itemsInStock.add(drumSticks);
         itemsInStock.add(guitarStrings);
@@ -62,5 +62,10 @@ public class ShopTest {
     public void canRemoveFromStock(){
         shop.removeFromStock();
         assertEquals(6, shop.getStock().size());
+    }
+
+    @Test
+    public void canCalculatePotentialProfit(){
+        assertEquals(1008, shop.calculateTotalPotentialProfit(), 0.0);
     }
 }
